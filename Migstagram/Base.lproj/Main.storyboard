@@ -140,7 +140,7 @@
         <!--Home View Controller-->
         <scene sceneID="QQs-mv-3hf">
             <objects>
-                <viewController storyboardIdentifier="Home" id="3fv-ko-WHk" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="3fv-ko-WHk" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sP9-vj-EjD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
