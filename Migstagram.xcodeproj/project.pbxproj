@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4A96F4512367F839F6D4AA /* libPods-MigstagramUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3293CE9D255B28D059784D6B /* libPods-MigstagramUITests.a */; };
 		62BFBF7D22B5DE1D0052EF54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF7C22B5DE1D0052EF54 /* AppDelegate.m */; };
 		62BFBF8022B5DE1D0052EF54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF7F22B5DE1D0052EF54 /* ViewController.m */; };
 		62BFBF8322B5DE1D0052EF54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BFBF8122B5DE1D0052EF54 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		62BFBF8B22B5DE1E0052EF54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF8A22B5DE1E0052EF54 /* main.m */; };
 		62BFBF9522B5DE1E0052EF54 /* MigstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF9422B5DE1E0052EF54 /* MigstagramTests.m */; };
 		62BFBFA022B5DE1E0052EF54 /* MigstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF9F22B5DE1E0052EF54 /* MigstagramUITests.m */; };
+		6C82E69EDA367AE54E3A686B /* libPods-MigstagramTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DB212EE137BD7BEFE44DFF /* libPods-MigstagramTests.a */; };
+		D9CED26EA0AFED25088F7910 /* libPods-Migstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDEE6558F5AF27A30EAAA5A /* libPods-Migstagram.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27DB212EE137BD7BEFE44DFF /* libPods-MigstagramTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MigstagramTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3293CE9D255B28D059784D6B /* libPods-MigstagramUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MigstagramUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3C435772CE70F6B650809E /* Pods-MigstagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramUITests.release.xcconfig"; path = "Target Support Files/Pods-MigstagramUITests/Pods-MigstagramUITests.release.xcconfig"; sourceTree = "<group>"; };
 		62BFBF7822B5DE1D0052EF54 /* Migstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Migstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BFBF7B22B5DE1D0052EF54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		62BFBF7C22B5DE1D0052EF54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +57,12 @@
 		62BFBF9B22B5DE1E0052EF54 /* MigstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MigstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BFBF9F22B5DE1E0052EF54 /* MigstagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MigstagramUITests.m; sourceTree = "<group>"; };
 		62BFBFA122B5DE1E0052EF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CC9B6DFB6B22E414E25D209 /* Pods-MigstagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-MigstagramUITests/Pods-MigstagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8488E3CCC06BFFDB293BEB0C /* Pods-Migstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Migstagram.debug.xcconfig"; path = "Target Support Files/Pods-Migstagram/Pods-Migstagram.debug.xcconfig"; sourceTree = "<group>"; };
+		8C625FEE37F90456BEA3E7E1 /* Pods-MigstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-MigstagramTests/Pods-MigstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		964000C7528C99994DF6CAC7 /* Pods-MigstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramTests.release.xcconfig"; path = "Target Support Files/Pods-MigstagramTests/Pods-MigstagramTests.release.xcconfig"; sourceTree = "<group>"; };
+		967CC3EFCA53363F1B6CC33A /* Pods-Migstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Migstagram.release.xcconfig"; path = "Target Support Files/Pods-Migstagram/Pods-Migstagram.release.xcconfig"; sourceTree = "<group>"; };
+		CDDEE6558F5AF27A30EAAA5A /* libPods-Migstagram.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Migstagram.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9CED26EA0AFED25088F7910 /* libPods-Migstagram.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C82E69EDA367AE54E3A686B /* libPods-MigstagramTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F4A96F4512367F839F6D4AA /* libPods-MigstagramUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				62BFBF9322B5DE1E0052EF54 /* MigstagramTests */,
 				62BFBF9E22B5DE1E0052EF54 /* MigstagramUITests */,
 				62BFBF7922B5DE1D0052EF54 /* Products */,
+				BA5343B1BB5FD2927A9D54E4 /* Pods */,
+				64DE8779AFE8C5D29D625649 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +149,30 @@
 			path = MigstagramUITests;
 			sourceTree = "<group>";
 		};
+		64DE8779AFE8C5D29D625649 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDDEE6558F5AF27A30EAAA5A /* libPods-Migstagram.a */,
+				27DB212EE137BD7BEFE44DFF /* libPods-MigstagramTests.a */,
+				3293CE9D255B28D059784D6B /* libPods-MigstagramUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA5343B1BB5FD2927A9D54E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8488E3CCC06BFFDB293BEB0C /* Pods-Migstagram.debug.xcconfig */,
+				967CC3EFCA53363F1B6CC33A /* Pods-Migstagram.release.xcconfig */,
+				8C625FEE37F90456BEA3E7E1 /* Pods-MigstagramTests.debug.xcconfig */,
+				964000C7528C99994DF6CAC7 /* Pods-MigstagramTests.release.xcconfig */,
+				7CC9B6DFB6B22E414E25D209 /* Pods-MigstagramUITests.debug.xcconfig */,
+				4F3C435772CE70F6B650809E /* Pods-MigstagramUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62BFBFA422B5DE1E0052EF54 /* Build configuration list for PBXNativeTarget "Migstagram" */;
 			buildPhases = (
+				DA0948719D81B463DF3B1557 /* [CP] Check Pods Manifest.lock */,
 				62BFBF7422B5DE1D0052EF54 /* Sources */,
 				62BFBF7522B5DE1D0052EF54 /* Frameworks */,
 				62BFBF7622B5DE1D0052EF54 /* Resources */,
+				2107DBEB22078597BB4B2893 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62BFBFA722B5DE1E0052EF54 /* Build configuration list for PBXNativeTarget "MigstagramTests" */;
 			buildPhases = (
+				669C4AA508948F84CCC01ED3 /* [CP] Check Pods Manifest.lock */,
 				62BFBF8C22B5DE1E0052EF54 /* Sources */,
 				62BFBF8D22B5DE1E0052EF54 /* Frameworks */,
 				62BFBF8E22B5DE1E0052EF54 /* Resources */,
@@ -174,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62BFBFAA22B5DE1E0052EF54 /* Build configuration list for PBXNativeTarget "MigstagramUITests" */;
 			buildPhases = (
+				C94CFC935E59E22E0F435813 /* [CP] Check Pods Manifest.lock */,
 				62BFBF9722B5DE1E0052EF54 /* Sources */,
 				62BFBF9822B5DE1E0052EF54 /* Frameworks */,
 				62BFBF9922B5DE1E0052EF54 /* Resources */,
@@ -256,6 +301,97 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2107DBEB22078597BB4B2893 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Migstagram/Pods-Migstagram-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Migstagram/Pods-Migstagram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		669C4AA508948F84CCC01ED3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MigstagramTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C94CFC935E59E22E0F435813 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MigstagramUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA0948719D81B463DF3B1557 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Migstagram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		62BFBF7422B5DE1D0052EF54 /* Sources */ = {
@@ -433,6 +569,7 @@
 		};
 		62BFBFA522B5DE1E0052EF54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8488E3CCC06BFFDB293BEB0C /* Pods-Migstagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +587,7 @@
 		};
 		62BFBFA622B5DE1E0052EF54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 967CC3EFCA53363F1B6CC33A /* Pods-Migstagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -467,6 +605,7 @@
 		};
 		62BFBFA822B5DE1E0052EF54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C625FEE37F90456BEA3E7E1 /* Pods-MigstagramTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +625,7 @@
 		};
 		62BFBFA922B5DE1E0052EF54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 964000C7528C99994DF6CAC7 /* Pods-MigstagramTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +645,7 @@
 		};
 		62BFBFAB22B5DE1E0052EF54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC9B6DFB6B22E414E25D209 /* Pods-MigstagramUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GVBR98P59;
@@ -523,6 +664,7 @@
 		};
 		62BFBFAC22B5DE1E0052EF54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F3C435772CE70F6B650809E /* Pods-MigstagramUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GVBR98P59;
