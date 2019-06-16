@@ -7,6 +7,9 @@
 //
 
 #import "HomeViewController.h"
+#import "OpeningViewController.h"
+#import "AppDelegate.h"
+#import <Parse.h>
 
 @interface HomeViewController ()
 
@@ -17,6 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+// MARK: IBActions
+- (IBAction)didTapLogOut:(id)sender {
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    OpeningViewController *openingViewController = [storyboard instantiateViewControllerWithIdentifier:@"OpeningViewController"];
+    appDelegate.window.rootViewController = openingViewController;
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        NSLog(@"Logged out!");
+    }];
 }
 
 /*
