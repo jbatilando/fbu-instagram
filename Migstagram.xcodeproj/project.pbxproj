@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		0F4A96F4512367F839F6D4AA /* libPods-MigstagramUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3293CE9D255B28D059784D6B /* libPods-MigstagramUITests.a */; };
 		62BFBF7D22B5DE1D0052EF54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF7C22B5DE1D0052EF54 /* AppDelegate.m */; };
-		62BFBF8022B5DE1D0052EF54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF7F22B5DE1D0052EF54 /* ViewController.m */; };
 		62BFBF8322B5DE1D0052EF54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BFBF8122B5DE1D0052EF54 /* Main.storyboard */; };
 		62BFBF8522B5DE1E0052EF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62BFBF8422B5DE1E0052EF54 /* Assets.xcassets */; };
 		62BFBF8822B5DE1E0052EF54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BFBF8622B5DE1E0052EF54 /* LaunchScreen.storyboard */; };
 		62BFBF8B22B5DE1E0052EF54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF8A22B5DE1E0052EF54 /* main.m */; };
 		62BFBF9522B5DE1E0052EF54 /* MigstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF9422B5DE1E0052EF54 /* MigstagramTests.m */; };
 		62BFBFA022B5DE1E0052EF54 /* MigstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF9F22B5DE1E0052EF54 /* MigstagramUITests.m */; };
+		62BFBFBC22B5EDC60052EF54 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFBB22B5EDC60052EF54 /* User.m */; };
+		62BFBFBF22B5F3B10052EF54 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFBE22B5F3B10052EF54 /* RegisterViewController.m */; };
+		62BFBFC222B5F3EA0052EF54 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFC122B5F3EA0052EF54 /* LoginViewController.m */; };
+		62BFBFC522B5F3F80052EF54 /* OpeningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFC422B5F3F80052EF54 /* OpeningViewController.m */; };
+		62BFBFC822B5F90C0052EF54 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFC722B5F90C0052EF54 /* HomeViewController.m */; };
 		6C82E69EDA367AE54E3A686B /* libPods-MigstagramTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DB212EE137BD7BEFE44DFF /* libPods-MigstagramTests.a */; };
 		D9CED26EA0AFED25088F7910 /* libPods-Migstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDEE6558F5AF27A30EAAA5A /* libPods-Migstagram.a */; };
 /* End PBXBuildFile section */
@@ -44,8 +48,6 @@
 		62BFBF7822B5DE1D0052EF54 /* Migstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Migstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BFBF7B22B5DE1D0052EF54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		62BFBF7C22B5DE1D0052EF54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		62BFBF7E22B5DE1D0052EF54 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		62BFBF7F22B5DE1D0052EF54 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		62BFBF8222B5DE1D0052EF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62BFBF8422B5DE1E0052EF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62BFBF8722B5DE1E0052EF54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +59,16 @@
 		62BFBF9B22B5DE1E0052EF54 /* MigstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MigstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BFBF9F22B5DE1E0052EF54 /* MigstagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MigstagramUITests.m; sourceTree = "<group>"; };
 		62BFBFA122B5DE1E0052EF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62BFBFBA22B5EDC60052EF54 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		62BFBFBB22B5EDC60052EF54 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		62BFBFBD22B5F3B10052EF54 /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		62BFBFBE22B5F3B10052EF54 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		62BFBFC022B5F3EA0052EF54 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		62BFBFC122B5F3EA0052EF54 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		62BFBFC322B5F3F80052EF54 /* OpeningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpeningViewController.h; sourceTree = "<group>"; };
+		62BFBFC422B5F3F80052EF54 /* OpeningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpeningViewController.m; sourceTree = "<group>"; };
+		62BFBFC622B5F90C0052EF54 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		62BFBFC722B5F90C0052EF54 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		7CC9B6DFB6B22E414E25D209 /* Pods-MigstagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-MigstagramUITests/Pods-MigstagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8488E3CCC06BFFDB293BEB0C /* Pods-Migstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Migstagram.debug.xcconfig"; path = "Target Support Files/Pods-Migstagram/Pods-Migstagram.debug.xcconfig"; sourceTree = "<group>"; };
 		8C625FEE37F90456BEA3E7E1 /* Pods-MigstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-MigstagramTests/Pods-MigstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,10 +130,10 @@
 		62BFBF7A22B5DE1D0052EF54 /* Migstagram */ = {
 			isa = PBXGroup;
 			children = (
+				62BFBFB822B5ED150052EF54 /* Models */,
+				62BFBFB722B5EC230052EF54 /* View Controllers */,
 				62BFBF7B22B5DE1D0052EF54 /* AppDelegate.h */,
 				62BFBF7C22B5DE1D0052EF54 /* AppDelegate.m */,
-				62BFBF7E22B5DE1D0052EF54 /* ViewController.h */,
-				62BFBF7F22B5DE1D0052EF54 /* ViewController.m */,
 				62BFBF8122B5DE1D0052EF54 /* Main.storyboard */,
 				62BFBF8422B5DE1E0052EF54 /* Assets.xcassets */,
 				62BFBF8622B5DE1E0052EF54 /* LaunchScreen.storyboard */,
@@ -147,6 +159,30 @@
 				62BFBFA122B5DE1E0052EF54 /* Info.plist */,
 			);
 			path = MigstagramUITests;
+			sourceTree = "<group>";
+		};
+		62BFBFB722B5EC230052EF54 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				62BFBFBD22B5F3B10052EF54 /* RegisterViewController.h */,
+				62BFBFBE22B5F3B10052EF54 /* RegisterViewController.m */,
+				62BFBFC022B5F3EA0052EF54 /* LoginViewController.h */,
+				62BFBFC122B5F3EA0052EF54 /* LoginViewController.m */,
+				62BFBFC322B5F3F80052EF54 /* OpeningViewController.h */,
+				62BFBFC422B5F3F80052EF54 /* OpeningViewController.m */,
+				62BFBFC622B5F90C0052EF54 /* HomeViewController.h */,
+				62BFBFC722B5F90C0052EF54 /* HomeViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		62BFBFB822B5ED150052EF54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				62BFBFBA22B5EDC60052EF54 /* User.h */,
+				62BFBFBB22B5EDC60052EF54 /* User.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		64DE8779AFE8C5D29D625649 /* Frameworks */ = {
@@ -397,9 +433,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62BFBF8022B5DE1D0052EF54 /* ViewController.m in Sources */,
+				62BFBFBF22B5F3B10052EF54 /* RegisterViewController.m in Sources */,
+				62BFBFC522B5F3F80052EF54 /* OpeningViewController.m in Sources */,
+				62BFBFBC22B5EDC60052EF54 /* User.m in Sources */,
 				62BFBF8B22B5DE1E0052EF54 /* main.m in Sources */,
 				62BFBF7D22B5DE1D0052EF54 /* AppDelegate.m in Sources */,
+				62BFBFC822B5F90C0052EF54 /* HomeViewController.m in Sources */,
+				62BFBFC222B5F3EA0052EF54 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
