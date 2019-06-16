@@ -169,7 +169,6 @@
 				7CC9B6DFB6B22E414E25D209 /* Pods-MigstagramUITests.debug.xcconfig */,
 				4F3C435772CE70F6B650809E /* Pods-MigstagramUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
