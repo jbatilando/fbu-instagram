@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Parse/Parse.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface User : NSObject
+@interface User : PFUser<PFSubclassing>
+// MARK: Properties
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *screenName;
+@property (strong, nonatomic) NSString *avatarImageURLString;
 
+// Create initializer
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSURL *) getAvatarURLString;
 @end
 
 NS_ASSUME_NONNULL_END

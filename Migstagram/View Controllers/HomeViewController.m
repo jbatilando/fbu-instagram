@@ -10,9 +10,14 @@
 #import "OpeningViewController.h"
 #import "AppDelegate.h"
 #import <Parse.h>
+#import <UIKit/UIKit.h>
+#import "PostCell.h"
 
-@interface HomeViewController ()
-
+@interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
+// MARK: Outlets
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+// MARK: Properties
+@property (nonatomic, strong) NSMutableArray *posts;
 @end
 
 @implementation HomeViewController
@@ -21,6 +26,41 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"Logged in as %@", PFUser.currentUser);
+    
+    // UIRefreshControl
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:refreshControl atIndex:0];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 160.0;
+    
+    // Get posts
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.posts.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
+    Post *post = self.posts[indexPath.row];
+    
+    // Call method for setting Tweet
+    [cell setPost:post];
+    
+    return cell;
+}
+
+// MARK: Methods
+- (void)beginRefresh:(UIRefreshControl *)refreshControl {
+    // [self getTimeline];
+    [self.tableView reloadData];
+    [refreshControl endRefreshing];
 }
 
 // MARK: IBActions

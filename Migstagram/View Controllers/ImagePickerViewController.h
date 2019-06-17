@@ -1,8 +1,8 @@
 //
-//  HomeViewController.h
+//  ImagePickerViewController.h
 //  Migstagram
 //
-//  Created by Miguel Batilando on 6/15/19.
+//  Created by Miguel Batilando on 6/16/19.
 //  Copyright © 2019 Acme. All rights reserved.
 //
 
@@ -11,11 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
-
+@interface ImagePickerViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 // MARK: Properties
 @property (nonatomic, strong) Post *post;
-
 @end
 
 NS_ASSUME_NONNULL_END
