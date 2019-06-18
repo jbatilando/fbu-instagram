@@ -20,11 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // Tap outside to dismiss keyboard
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    
+    // Image picker
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
+    imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
     
-    // [self presentViewController:imagePickerVC animated:YES completion:nil];
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -104,6 +110,10 @@
     UIGraphicsEndImageContext();
     
     return newImage;
+}
+
+- (void)dismissKeyboard {
+    [self.captionTextView resignFirstResponder];
 }
 
 /*

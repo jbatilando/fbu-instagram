@@ -49,6 +49,9 @@
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
     Post *post = self.posts[indexPath.row];
     cell.post = post;
+    cell.postContentImageView.file = post[@"image"];
+    cell.postCaptionLabel.text = post[@"caption"];
+    [cell.postContentImageView loadInBackground];
     return cell;
 }
 
@@ -122,15 +125,12 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqual:@"detailsSegue"]){
-        UINavigationController *navigationController = [segue destinationViewController];
-        DetailsPostViewController *detailsPostViewController = (DetailsPostViewController*)navigationController.topViewController;
+        DetailsPostViewController *detailsPostViewController = [segue destinationViewController];
         UITableViewCell *tappedCell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
         Post *post = self.posts[indexPath.row];
         detailsPostViewController.post = post;
     }
-    UINavigationController *navigationController = [segue destinationViewController];
-    DetailsPostViewController *detailsPostViewController = (DetailsPostViewController*)navigationController.topViewController;
 }
 
 @end

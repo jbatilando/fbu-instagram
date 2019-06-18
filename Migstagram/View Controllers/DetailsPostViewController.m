@@ -19,10 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.postContentImageView.file = self.post.image;
+    // self.postContentImageView.file = self.post.image;
     self.usernameAbovePostLabel.text = self.post.author.username;
     self.usernameBelowPostLabel.text = self.post.author.username;
     self.captionLabel.text = self.post.caption;
+    
+    // Format createdAt date string
+    NSDate *createdAt = [self.post createdAt];
+    NSLog(@"%@", createdAt);
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    formatter.dateFormat = @"E MMM d HH:mm:ss Z y";
+    [formatter setDateFormat:@"h:mm a"];
+    self.createdAtLabel.text = [formatter stringFromDate:createdAt];
 }
 
 @end
