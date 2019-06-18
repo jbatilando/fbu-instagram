@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *postLikeButton;
 @property (weak, nonatomic) IBOutlet UILabel *postAuthorBeneathButton;
 @property (weak, nonatomic) IBOutlet UILabel *postCaptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *createdAtLabel;
 
 // MARK: Methods
 -(void)setPost:(Post *)post;

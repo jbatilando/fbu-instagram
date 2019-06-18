@@ -33,8 +33,15 @@
     self.postAuthorLabel.text = post.author.username;
     self.postAuthorBeneathButton.text = post.author.username;
     self.postCaptionLabel.text = post.caption;
-    
     self.postAvatarImageView.layer.cornerRadius = (self.postAvatarImageView.frame.size.height) / 2;
+    
+    NSDate *createdAt = [self.post createdAt];
+    NSLog(@"%@", createdAt);
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    formatter.dateFormat = @"E MMM d HH:mm:ss Z y";
+    [formatter setDateFormat:@"h:mm a"];
+    self.createdAtLabel.text = [formatter stringFromDate:createdAt];
 }
 
 // MARK: IBActions

@@ -269,6 +269,12 @@
                                                         <action selector="didTapSave:" destination="8bI-Qr-7oF" eventType="touchUpInside" id="Xs0-Qu-HdC"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgT-mj-PaU">
+                                                    <rect key="frame" x="10" y="601" width="384" height="16"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="4MR-eq-7vh" firstAttribute="top" secondItem="Qau-Ct-vyN" secondAttribute="bottom" constant="9" id="3Zu-Bl-hxu"/>
@@ -296,10 +302,14 @@
                                                 <constraint firstItem="Qau-Ct-vyN" firstAttribute="leading" secondItem="FW7-pc-H0s" secondAttribute="leading" id="lyb-E8-Xjk"/>
                                                 <constraint firstItem="Bgf-uo-KvR" firstAttribute="top" secondItem="Qau-Ct-vyN" secondAttribute="bottom" constant="11" id="ogl-nb-Odv"/>
                                                 <constraint firstItem="mnD-WN-bhU" firstAttribute="leading" secondItem="FW7-pc-H0s" secondAttribute="leading" constant="10" id="pSp-4v-fsS"/>
+                                                <constraint firstItem="PgT-mj-PaU" firstAttribute="leading" secondItem="hiX-35-jQi" secondAttribute="leading" id="s3B-dM-bzd"/>
+                                                <constraint firstItem="PgT-mj-PaU" firstAttribute="top" secondItem="hiX-35-jQi" secondAttribute="bottom" constant="22" id="tdK-RL-Qwz"/>
+                                                <constraint firstAttribute="trailing" secondItem="PgT-mj-PaU" secondAttribute="trailing" constant="20" id="zOY-0g-bMe"/>
                                                 <constraint firstItem="mnD-WN-bhU" firstAttribute="top" secondItem="FW7-pc-H0s" secondAttribute="top" constant="12" id="zXS-LI-cTR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="createdAtLabel" destination="PgT-mj-PaU" id="Ybi-Ko-26G"/>
                                             <outlet property="postAuthorBeneathButton" destination="lTe-mU-R7G" id="dCT-Tm-qML"/>
                                             <outlet property="postAuthorLabel" destination="m9L-j0-kIZ" id="qQy-fW-CKH"/>
                                             <outlet property="postAvatarImageView" destination="mnD-WN-bhU" id="xQO-IR-5i0"/>
@@ -573,8 +583,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="dId-h5-NuP" kind="relationship" relationship="viewControllers" id="TFJ-oI-zAy"/>
-                        <segue destination="hEH-wN-Yda" kind="relationship" relationship="viewControllers" id="hYa-ra-9jn"/>
-                        <segue destination="P3L-0f-k9Q" kind="relationship" relationship="viewControllers" id="Pea-d1-aaR"/>
                         <segue destination="qHf-SV-Ovf" kind="relationship" relationship="viewControllers" id="WyV-4V-gQe"/>
                         <segue destination="8dF-ax-7HZ" kind="relationship" relationship="viewControllers" id="DwY-mw-hWu"/>
                     </connections>
@@ -582,24 +590,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ss9-AP-8RM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2986.9565217391305" y="133.92857142857142"/>
-        </scene>
-        <!--Search-->
-        <scene sceneID="ScF-TZ-aMu">
-            <objects>
-                <viewController id="hEH-wN-Yda" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NNw-Bi-3yb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="R7b-8a-dHM"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="mmF-FX-uoL">
-                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CCJ-yi-luO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2010" y="958"/>
         </scene>
         <!--Add Picture-->
         <scene sceneID="hTe-58-G6K">
@@ -684,25 +674,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hl-0U-Hyh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3067" y="958"/>
-        </scene>
-        <!--Recent Activity-->
-        <scene sceneID="skL-Cx-SZB">
-            <objects>
-                <viewController id="P3L-0f-k9Q" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="p88-jI-TrF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="b3o-6z-kIF"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Recent Activity" id="Ktb-YT-yFH">
-                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gx0-c3-NNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4758" y="1040"/>
+            <point key="canvasLocation" x="2577" y="881"/>
         </scene>
         <!--Profile-->
         <scene sceneID="B1s-3Q-myZ">
@@ -839,7 +811,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fi-o0-0cE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6039.130434782609" y="1039.9553571428571"/>
+            <point key="canvasLocation" x="3754" y="881"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="Oe6-yZ-iRB">
@@ -866,17 +838,25 @@
                     <navigationItem key="navigationItem" title="Edit Profile" id="upk-fc-M4T">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="oL6-8G-SxC">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapCancel:" destination="nc3-Z0-WTa" id="pK2-hA-KpQ"/>
+                            </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="ddH-Wt-IgH"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="ddH-Wt-IgH">
+                            <connections>
+                                <action selector="didTapDone:" destination="nc3-Z0-WTa" id="LFu-vI-Yz7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="avatarImageView" destination="5Ox-A7-vjQ" id="XFY-fc-KAf"/>
                         <outlet property="changeProfilePhotoButton" destination="BvH-IL-UKP" id="fdI-mO-m6a"/>
+                        <segue destination="qHf-SV-Ovf" kind="show" identifier="profileSegue" id="xFm-Uw-qQ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQn-JC-fCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7928.985507246377" y="1039.9553571428571"/>
+            <point key="canvasLocation" x="5386" y="881"/>
         </scene>
         <!--Home-->
         <scene sceneID="ghG-4v-KHn">
@@ -915,7 +895,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdB-X7-2Km" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7018.8405797101459" y="1039.9553571428571"/>
+            <point key="canvasLocation" x="4555" y="881"/>
         </scene>
     </scenes>
     <resources>
@@ -927,6 +907,7 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="xFm-Uw-qQ0"/>
         <segue reference="2uh-2G-5Xd"/>
     </inferredMetricsTieBreakers>
 </document>

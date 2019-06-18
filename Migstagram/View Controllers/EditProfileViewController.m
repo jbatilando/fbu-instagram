@@ -22,6 +22,15 @@
     // Do any additional setup after loading the view.
 }
 
+// MARK: IBActions
+- (IBAction)didTapCancel:(id)sender {
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+- (IBAction)didTapDone:(id)sender {
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 
