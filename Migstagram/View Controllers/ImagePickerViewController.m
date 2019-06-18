@@ -24,7 +24,7 @@
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
     
-    [self presentViewController:imagePickerVC animated:YES completion:nil];
+    // [self presentViewController:imagePickerVC animated:YES completion:nil];
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -39,17 +39,17 @@
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     
     // Do something with the images (based on your use case)
-    self.selectedImageView.image = [self resizeImage:editedImage withSize:CGSizeMake(400, 400)];
+    self.selectedImageView.image = [self resizeImage:editedImage withSize:CGSizeMake(414, 414)];
     
     // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-    // [self performSegueWithIdentifier:@"tagSegue" sender:nil];
 }
 
 // MARK: IBActions
 - (IBAction)didTapCancel:(id)sender {
+    [self performSegueWithIdentifier:@"homeSegue3" sender:nil];
 }
+
 - (IBAction)didTapPost:(id)sender {
     if (![self.selectedImageView.image isEqual:[UIImage imageNamed:@"image_placeholder"]] && !self.uploading) {
         self.uploading = YES;
@@ -62,7 +62,8 @@
                 // Create an alert
             }
             self.uploading = NO;
-            [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
+            // [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
+            [self performSegueWithIdentifier:@"homeSegue3" sender:nil];
         }];
     }
     else {
@@ -70,6 +71,7 @@
     }
 }
 - (IBAction)didTapUploadPhotoFromLibrary:(id)sender {
+    [self getImage:NO];
 }
 
 // MARK: Methods

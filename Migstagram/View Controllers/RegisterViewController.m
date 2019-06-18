@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
 }
 
 // MARK: IBActions
@@ -49,6 +51,13 @@
         }
     }];
 }
+
+-(void)dismissKeyboard {
+    [self.usernameTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+    [self.emailTextField resignFirstResponder];
+}
+
 /*
 #pragma mark - Navigation
 

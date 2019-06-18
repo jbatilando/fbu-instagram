@@ -8,6 +8,7 @@
 
 #import "PostCell.h"
 #import "Post.h"
+#import "PFImageView.h"
 
 @implementation PostCell
 
@@ -26,20 +27,14 @@
     _post = post;
 
     self.postContentImageView.image = [UIImage imageNamed:@"image_placeholder"];
-    // self.postContentImageView = post.image;
-    // [self.postContentImageView loadInBackground];
+    self.postContentImageView.file = post.image;
+    [self.postContentImageView loadInBackground];
     
     self.postAuthorLabel.text = post.author.username;
     self.postAuthorBeneathButton.text = post.author.username;
     self.postCaptionLabel.text = post.caption;
     
     self.postAvatarImageView.layer.cornerRadius = (self.postAvatarImageView.frame.size.height) / 2;
-    
-//    NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
-//    NSNumber *likes = [formatter numberFromString:self.likesLabel.text];
-//    NSNumber *comments = [formatter numberFromString:self.commentsLabel.text];
-//    likes = post.likeCount;
-//    comments = post.commentCount;
 }
 
 // MARK: IBActions

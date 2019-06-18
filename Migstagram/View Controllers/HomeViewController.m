@@ -48,11 +48,15 @@
     return self.posts.count;
 }
 
--( UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
     Post *post = self.posts[indexPath.row];
     cell.post = post;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
 
 // MARK: Methods
@@ -107,16 +111,16 @@
 }
 
 // MARK: IBActions
-- (IBAction)didTapLogOut:(id)sender {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    OpeningViewController *openingViewController = [storyboard instantiateViewControllerWithIdentifier:@"OpeningViewController"];
-    appDelegate.window.rootViewController = openingViewController;
-    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
-        NSLog(@"Logged out!");
-    }];
-}
+//- (IBAction)didTapLogOut:(id)sender {
+//    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    OpeningViewController *openingViewController = [storyboard instantiateViewControllerWithIdentifier:@"OpeningViewController"];
+//    appDelegate.window.rootViewController = openingViewController;
+//    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+//        NSLog(@"Logged out!");
+//    }];
+//}
 
 /*
 #pragma mark - Navigation
