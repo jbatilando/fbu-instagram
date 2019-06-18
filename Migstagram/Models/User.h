@@ -19,7 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Create initializer
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
-- (NSURL *) getAvatarURLString;
 @end
 
 NS_ASSUME_NONNULL_END

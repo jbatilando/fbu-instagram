@@ -21,9 +21,4 @@
     }
     return self;
 }
-
-- (NSURL *) getAvatarURLString {
-    NSURL *posterURL = [NSURL URLWithString:[self avatarImageURLString]];
-    return posterURL;
-}
 @end
