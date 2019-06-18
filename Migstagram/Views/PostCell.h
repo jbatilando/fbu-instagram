@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Post.h"
+#import <Parse/Parse.h>
+#import "PFImageView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) Post *post;
 
 // MARK: Outlets
-@property (weak, nonatomic) IBOutlet UIImageView *postContentImageView;
+@property (weak, nonatomic) IBOutlet PFImageView *postContentImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *postAvatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *postAuthorLabel;
 @property (weak, nonatomic) IBOutlet UIButton *postOptionsButton;

@@ -7,6 +7,7 @@ target 'Migstagram' do
 
   # Pods for Migstagram
   pod 'Parse'
+  pod 'Parse/UI'
 
   target 'MigstagramTests' do
     inherit! :search_paths

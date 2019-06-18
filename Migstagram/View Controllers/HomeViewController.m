@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 // MARK: Properties
 @property (nonatomic, strong) NSMutableArray *posts;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 @end
 
 @implementation HomeViewController
@@ -27,11 +28,6 @@
     // Do any additional setup after loading the view.
     NSLog(@"Logged in as %@", PFUser.currentUser);
     
-    // UIRefreshControl
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView insertSubview:refreshControl atIndex:0];
-    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -39,20 +35,23 @@
     self.tableView.estimatedRowHeight = 160.0;
     
     // Get posts
+    // bind action to refresh control
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(fetchPosts) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:self.refreshControl atIndex:0];
+    self.posts = [[NSMutableArray alloc] init];
+    
+    [self fetchPosts:@20];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.posts.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
+-( UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
     Post *post = self.posts[indexPath.row];
-    
-    // Call method for setting Tweet
-    [cell setPost:post];
-    
+    cell.post = post;
     return cell;
 }
 
@@ -61,6 +60,50 @@
     // [self getTimeline];
     [self.tableView reloadData];
     [refreshControl endRefreshing];
+}
+
+- (void) fetchPosts {
+    // Construct query
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query includeKey:@"author"];
+    [query orderByDescending:@"createdAt"];
+    query.limit = 20;
+    
+    // Fetch data asynchronously
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        if (posts != nil) {
+            [self.posts removeAllObjects];
+            for (Post *post in posts) {
+                [self.posts addObject:post];
+            }
+            [self.refreshControl endRefreshing];
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+}
+
+- (void) fetchPosts:(NSNumber *) postCount {
+    // Construct query
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query includeKey:@"author"];
+    [query orderByDescending:@"createdAt"];
+    query.limit = 20;
+    
+    // Fetch data asynchronously
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        if (posts != nil) {
+            [self.posts removeAllObjects];
+            for (Post *post in posts) {
+                [self.posts addObject:post];
+            }
+            [self.refreshControl endRefreshing];
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
 }
 
 // MARK: IBActions

@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 // MARK: Properties
 @property (nonatomic, strong) Post *post;
 
+// MARK: Methods
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -18,24 +18,28 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
 
 // MARK: Methods
 -(void)setPost:(Post *)post {
     _post = post;
+
+    self.postContentImageView.image = [UIImage imageNamed:@"image_placeholder"];
+    // self.postContentImageView = post.image;
+    // [self.postContentImageView loadInBackground];
     
-    // Set properties for post
-    self.postContentImageView = post.image;
-    // self.postAvatarImageView = ?
-    self.postAuthorLabel.text = post.userID;
-    self.postAuthorBeneathButton = post.userID;
-    self.postCaptionLabel = post.caption;
-    // [self.avatarImageView setImageWithURL: [tweet.user getAvatarURLString]];
-    // self.avatarImageView.layer.cornerRadius = 28;
-    // self.avatarImageView.layer.masksToBounds = YES;
+    self.postAuthorLabel.text = post.author.username;
+    self.postAuthorBeneathButton.text = post.author.username;
+    self.postCaptionLabel.text = post.caption;
     
+    self.postAvatarImageView.layer.cornerRadius = (self.postAvatarImageView.frame.size.height) / 2;
+    
+//    NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
+//    NSNumber *likes = [formatter numberFromString:self.likesLabel.text];
+//    NSNumber *comments = [formatter numberFromString:self.commentsLabel.text];
+//    likes = post.likeCount;
+//    comments = post.commentCount;
 }
 
 // MARK: IBActions

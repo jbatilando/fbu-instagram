@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F4A96F4512367F839F6D4AA /* libPods-MigstagramUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3293CE9D255B28D059784D6B /* libPods-MigstagramUITests.a */; };
+		4E18E7FBFC5A8AC339FECFC8 /* libPods-MigstagramTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A897A79D90BF838AD243BA6B /* libPods-MigstagramTests.a */; };
 		62BFBF7D22B5DE1D0052EF54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF7C22B5DE1D0052EF54 /* AppDelegate.m */; };
 		62BFBF8322B5DE1D0052EF54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BFBF8122B5DE1D0052EF54 /* Main.storyboard */; };
 		62BFBF8522B5DE1E0052EF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62BFBF8422B5DE1E0052EF54 /* Assets.xcassets */; };
@@ -15,7 +15,6 @@
 		62BFBF8B22B5DE1E0052EF54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF8A22B5DE1E0052EF54 /* main.m */; };
 		62BFBF9522B5DE1E0052EF54 /* MigstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF9422B5DE1E0052EF54 /* MigstagramTests.m */; };
 		62BFBFA022B5DE1E0052EF54 /* MigstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF9F22B5DE1E0052EF54 /* MigstagramUITests.m */; };
-		62BFBFBC22B5EDC60052EF54 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFBB22B5EDC60052EF54 /* User.m */; };
 		62BFBFBF22B5F3B10052EF54 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFBE22B5F3B10052EF54 /* RegisterViewController.m */; };
 		62BFBFC222B5F3EA0052EF54 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFC122B5F3EA0052EF54 /* LoginViewController.m */; };
 		62BFBFC522B5F3F80052EF54 /* OpeningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFC422B5F3F80052EF54 /* OpeningViewController.m */; };
@@ -23,8 +22,9 @@
 		62BFBFCB22B6BA0C0052EF54 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFCA22B6BA0C0052EF54 /* ImagePickerViewController.m */; };
 		62BFBFD122B6BC550052EF54 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFD022B6BC550052EF54 /* Post.m */; };
 		62BFBFD522B71F310052EF54 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFD422B71F310052EF54 /* PostCell.m */; };
-		6C82E69EDA367AE54E3A686B /* libPods-MigstagramTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DB212EE137BD7BEFE44DFF /* libPods-MigstagramTests.a */; };
-		D9CED26EA0AFED25088F7910 /* libPods-Migstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDEE6558F5AF27A30EAAA5A /* libPods-Migstagram.a */; };
+		62DF14E322B8742900C874B9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFBB22B5EDC60052EF54 /* User.m */; };
+		7AD799E36E72B1213570D145 /* libPods-MigstagramUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E86936401910448175C7C3 /* libPods-MigstagramUITests.a */; };
+		B3B80BBF64387B9BB1A48682 /* libPods-Migstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7E527F3A103F3EE4767337 /* libPods-Migstagram.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		27DB212EE137BD7BEFE44DFF /* libPods-MigstagramTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MigstagramTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3293CE9D255B28D059784D6B /* libPods-MigstagramUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MigstagramUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F3C435772CE70F6B650809E /* Pods-MigstagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramUITests.release.xcconfig"; path = "Target Support Files/Pods-MigstagramUITests/Pods-MigstagramUITests.release.xcconfig"; sourceTree = "<group>"; };
+		24C592B4080860927B54D576 /* Pods-MigstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramTests.release.xcconfig"; path = "Target Support Files/Pods-MigstagramTests/Pods-MigstagramTests.release.xcconfig"; sourceTree = "<group>"; };
+		3553DE352FC7AB6CC225E5C8 /* Pods-Migstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Migstagram.debug.xcconfig"; path = "Target Support Files/Pods-Migstagram/Pods-Migstagram.debug.xcconfig"; sourceTree = "<group>"; };
 		62BFBF7822B5DE1D0052EF54 /* Migstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Migstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BFBF7B22B5DE1D0052EF54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		62BFBF7C22B5DE1D0052EF54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,12 +77,14 @@
 		62BFBFD022B6BC550052EF54 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		62BFBFD322B71F310052EF54 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		62BFBFD422B71F310052EF54 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
-		7CC9B6DFB6B22E414E25D209 /* Pods-MigstagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-MigstagramUITests/Pods-MigstagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8488E3CCC06BFFDB293BEB0C /* Pods-Migstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Migstagram.debug.xcconfig"; path = "Target Support Files/Pods-Migstagram/Pods-Migstagram.debug.xcconfig"; sourceTree = "<group>"; };
-		8C625FEE37F90456BEA3E7E1 /* Pods-MigstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-MigstagramTests/Pods-MigstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
-		964000C7528C99994DF6CAC7 /* Pods-MigstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramTests.release.xcconfig"; path = "Target Support Files/Pods-MigstagramTests/Pods-MigstagramTests.release.xcconfig"; sourceTree = "<group>"; };
-		967CC3EFCA53363F1B6CC33A /* Pods-Migstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Migstagram.release.xcconfig"; path = "Target Support Files/Pods-Migstagram/Pods-Migstagram.release.xcconfig"; sourceTree = "<group>"; };
-		CDDEE6558F5AF27A30EAAA5A /* libPods-Migstagram.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Migstagram.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62E9746A22B8643F00AABBB4 /* libParse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libParse.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		905EADD8D84D3EE0A030EB7A /* Pods-Migstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Migstagram.release.xcconfig"; path = "Target Support Files/Pods-Migstagram/Pods-Migstagram.release.xcconfig"; sourceTree = "<group>"; };
+		A897A79D90BF838AD243BA6B /* libPods-MigstagramTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MigstagramTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C7BF9EA129663012838550 /* Pods-MigstagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramUITests.release.xcconfig"; path = "Target Support Files/Pods-MigstagramUITests/Pods-MigstagramUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BAC002D61F97761C0C6BBE65 /* Pods-MigstagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-MigstagramUITests/Pods-MigstagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5E86936401910448175C7C3 /* libPods-MigstagramUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MigstagramUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7E527F3A103F3EE4767337 /* libPods-Migstagram.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Migstagram.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F4B999C66A7496A4BA9A48 /* Pods-MigstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-MigstagramTests/Pods-MigstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9CED26EA0AFED25088F7910 /* libPods-Migstagram.a in Frameworks */,
+				B3B80BBF64387B9BB1A48682 /* libPods-Migstagram.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C82E69EDA367AE54E3A686B /* libPods-MigstagramTests.a in Frameworks */,
+				4E18E7FBFC5A8AC339FECFC8 /* libPods-MigstagramTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F4A96F4512367F839F6D4AA /* libPods-MigstagramUITests.a in Frameworks */,
+				7AD799E36E72B1213570D145 /* libPods-MigstagramUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +212,10 @@
 		64DE8779AFE8C5D29D625649 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CDDEE6558F5AF27A30EAAA5A /* libPods-Migstagram.a */,
-				27DB212EE137BD7BEFE44DFF /* libPods-MigstagramTests.a */,
-				3293CE9D255B28D059784D6B /* libPods-MigstagramUITests.a */,
+				62E9746A22B8643F00AABBB4 /* libParse.a */,
+				EA7E527F3A103F3EE4767337 /* libPods-Migstagram.a */,
+				A897A79D90BF838AD243BA6B /* libPods-MigstagramTests.a */,
+				C5E86936401910448175C7C3 /* libPods-MigstagramUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,12 +223,12 @@
 		BA5343B1BB5FD2927A9D54E4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8488E3CCC06BFFDB293BEB0C /* Pods-Migstagram.debug.xcconfig */,
-				967CC3EFCA53363F1B6CC33A /* Pods-Migstagram.release.xcconfig */,
-				8C625FEE37F90456BEA3E7E1 /* Pods-MigstagramTests.debug.xcconfig */,
-				964000C7528C99994DF6CAC7 /* Pods-MigstagramTests.release.xcconfig */,
-				7CC9B6DFB6B22E414E25D209 /* Pods-MigstagramUITests.debug.xcconfig */,
-				4F3C435772CE70F6B650809E /* Pods-MigstagramUITests.release.xcconfig */,
+				3553DE352FC7AB6CC225E5C8 /* Pods-Migstagram.debug.xcconfig */,
+				905EADD8D84D3EE0A030EB7A /* Pods-Migstagram.release.xcconfig */,
+				F8F4B999C66A7496A4BA9A48 /* Pods-MigstagramTests.debug.xcconfig */,
+				24C592B4080860927B54D576 /* Pods-MigstagramTests.release.xcconfig */,
+				BAC002D61F97761C0C6BBE65 /* Pods-MigstagramUITests.debug.xcconfig */,
+				B1C7BF9EA129663012838550 /* Pods-MigstagramUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -238,11 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62BFBFA422B5DE1E0052EF54 /* Build configuration list for PBXNativeTarget "Migstagram" */;
 			buildPhases = (
-				DA0948719D81B463DF3B1557 /* [CP] Check Pods Manifest.lock */,
+				A8DA2D1ED8B93305967FF326 /* [CP] Check Pods Manifest.lock */,
 				62BFBF7422B5DE1D0052EF54 /* Sources */,
 				62BFBF7522B5DE1D0052EF54 /* Frameworks */,
 				62BFBF7622B5DE1D0052EF54 /* Resources */,
-				2107DBEB22078597BB4B2893 /* [CP] Copy Pods Resources */,
+				E03B1FEDF17530AECC1E6141 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,7 +259,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62BFBFA722B5DE1E0052EF54 /* Build configuration list for PBXNativeTarget "MigstagramTests" */;
 			buildPhases = (
-				669C4AA508948F84CCC01ED3 /* [CP] Check Pods Manifest.lock */,
+				91FE3B849122FA7C07231705 /* [CP] Check Pods Manifest.lock */,
 				62BFBF8C22B5DE1E0052EF54 /* Sources */,
 				62BFBF8D22B5DE1E0052EF54 /* Frameworks */,
 				62BFBF8E22B5DE1E0052EF54 /* Resources */,
@@ -276,7 +278,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62BFBFAA22B5DE1E0052EF54 /* Build configuration list for PBXNativeTarget "MigstagramUITests" */;
 			buildPhases = (
-				C94CFC935E59E22E0F435813 /* [CP] Check Pods Manifest.lock */,
+				79F8547810A57A23A65A5A3B /* [CP] Check Pods Manifest.lock */,
 				62BFBF9722B5DE1E0052EF54 /* Sources */,
 				62BFBF9822B5DE1E0052EF54 /* Frameworks */,
 				62BFBF9922B5DE1E0052EF54 /* Resources */,
@@ -361,51 +363,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2107DBEB22078597BB4B2893 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Migstagram/Pods-Migstagram-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Migstagram/Pods-Migstagram-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		669C4AA508948F84CCC01ED3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MigstagramTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C94CFC935E59E22E0F435813 /* [CP] Check Pods Manifest.lock */ = {
+		79F8547810A57A23A65A5A3B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -427,7 +385,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DA0948719D81B463DF3B1557 /* [CP] Check Pods Manifest.lock */ = {
+		91FE3B849122FA7C07231705 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MigstagramTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8DA2D1ED8B93305967FF326 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,6 +429,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E03B1FEDF17530AECC1E6141 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Migstagram/Pods-Migstagram-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Migstagram/Pods-Migstagram-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Migstagram/Pods-Migstagram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -456,9 +453,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62DF14E322B8742900C874B9 /* User.m in Sources */,
 				62BFBFBF22B5F3B10052EF54 /* RegisterViewController.m in Sources */,
 				62BFBFC522B5F3F80052EF54 /* OpeningViewController.m in Sources */,
-				62BFBFBC22B5EDC60052EF54 /* User.m in Sources */,
 				62BFBF8B22B5DE1E0052EF54 /* main.m in Sources */,
 				62BFBFD122B6BC550052EF54 /* Post.m in Sources */,
 				62BFBF7D22B5DE1D0052EF54 /* AppDelegate.m in Sources */,
@@ -634,11 +631,15 @@
 		};
 		62BFBFA522B5DE1E0052EF54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8488E3CCC06BFFDB293BEB0C /* Pods-Migstagram.debug.xcconfig */;
+			baseConfigurationReference = 3553DE352FC7AB6CC225E5C8 /* Pods-Migstagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GVBR98P59;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Migstagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -652,11 +653,15 @@
 		};
 		62BFBFA622B5DE1E0052EF54 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 967CC3EFCA53363F1B6CC33A /* Pods-Migstagram.release.xcconfig */;
+			baseConfigurationReference = 905EADD8D84D3EE0A030EB7A /* Pods-Migstagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GVBR98P59;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Migstagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -670,7 +675,7 @@
 		};
 		62BFBFA822B5DE1E0052EF54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C625FEE37F90456BEA3E7E1 /* Pods-MigstagramTests.debug.xcconfig */;
+			baseConfigurationReference = F8F4B999C66A7496A4BA9A48 /* Pods-MigstagramTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -690,7 +695,7 @@
 		};
 		62BFBFA922B5DE1E0052EF54 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 964000C7528C99994DF6CAC7 /* Pods-MigstagramTests.release.xcconfig */;
+			baseConfigurationReference = 24C592B4080860927B54D576 /* Pods-MigstagramTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -710,7 +715,7 @@
 		};
 		62BFBFAB22B5DE1E0052EF54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CC9B6DFB6B22E414E25D209 /* Pods-MigstagramUITests.debug.xcconfig */;
+			baseConfigurationReference = BAC002D61F97761C0C6BBE65 /* Pods-MigstagramUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GVBR98P59;
@@ -729,7 +734,7 @@
 		};
 		62BFBFAC22B5DE1E0052EF54 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F3C435772CE70F6B650809E /* Pods-MigstagramUITests.release.xcconfig */;
+			baseConfigurationReference = B1C7BF9EA129663012838550 /* Pods-MigstagramUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GVBR98P59;
