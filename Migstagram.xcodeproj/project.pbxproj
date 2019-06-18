@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4E18E7FBFC5A8AC339FECFC8 /* libPods-MigstagramTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A897A79D90BF838AD243BA6B /* libPods-MigstagramTests.a */; };
+		62BDD6D422B955010039E261 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD6D322B955010039E261 /* ProfileViewController.m */; };
+		62BDD6D722B957090039E261 /* ProfilePostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD6D622B957090039E261 /* ProfilePostCell.m */; };
 		62BFBF7D22B5DE1D0052EF54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF7C22B5DE1D0052EF54 /* AppDelegate.m */; };
 		62BFBF8322B5DE1D0052EF54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BFBF8122B5DE1D0052EF54 /* Main.storyboard */; };
 		62BFBF8522B5DE1E0052EF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62BFBF8422B5DE1E0052EF54 /* Assets.xcassets */; };
@@ -22,6 +24,7 @@
 		62BFBFCB22B6BA0C0052EF54 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFCA22B6BA0C0052EF54 /* ImagePickerViewController.m */; };
 		62BFBFD122B6BC550052EF54 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFD022B6BC550052EF54 /* Post.m */; };
 		62BFBFD522B71F310052EF54 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFD422B71F310052EF54 /* PostCell.m */; };
+		62CC19A622B9603F002673DE /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CC19A522B9603F002673DE /* EditProfileViewController.m */; };
 		62DF14E322B8742900C874B9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFBB22B5EDC60052EF54 /* User.m */; };
 		62DF14F022B8BCB800C874B9 /* DetailsPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF14EF22B8BCB800C874B9 /* DetailsPostViewController.m */; };
 		7AD799E36E72B1213570D145 /* libPods-MigstagramUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E86936401910448175C7C3 /* libPods-MigstagramUITests.a */; };
@@ -48,6 +51,10 @@
 /* Begin PBXFileReference section */
 		24C592B4080860927B54D576 /* Pods-MigstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramTests.release.xcconfig"; path = "Target Support Files/Pods-MigstagramTests/Pods-MigstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		3553DE352FC7AB6CC225E5C8 /* Pods-Migstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Migstagram.debug.xcconfig"; path = "Target Support Files/Pods-Migstagram/Pods-Migstagram.debug.xcconfig"; sourceTree = "<group>"; };
+		62BDD6D222B955010039E261 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		62BDD6D322B955010039E261 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		62BDD6D522B957090039E261 /* ProfilePostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfilePostCell.h; sourceTree = "<group>"; };
+		62BDD6D622B957090039E261 /* ProfilePostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfilePostCell.m; sourceTree = "<group>"; };
 		62BFBF7822B5DE1D0052EF54 /* Migstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Migstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BFBF7B22B5DE1D0052EF54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		62BFBF7C22B5DE1D0052EF54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +85,8 @@
 		62BFBFD022B6BC550052EF54 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		62BFBFD322B71F310052EF54 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		62BFBFD422B71F310052EF54 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		62CC19A422B9603F002673DE /* EditProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
+		62CC19A522B9603F002673DE /* EditProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		62DF14EE22B8BCB800C874B9 /* DetailsPostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsPostViewController.h; sourceTree = "<group>"; };
 		62DF14EF22B8BCB800C874B9 /* DetailsPostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsPostViewController.m; sourceTree = "<group>"; };
 		62E9746A22B8643F00AABBB4 /* libParse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libParse.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +187,8 @@
 		62BFBFB722B5EC230052EF54 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				62CC19A422B9603F002673DE /* EditProfileViewController.h */,
+				62CC19A522B9603F002673DE /* EditProfileViewController.m */,
 				62BFBFBD22B5F3B10052EF54 /* RegisterViewController.h */,
 				62BFBFBE22B5F3B10052EF54 /* RegisterViewController.m */,
 				62BFBFC022B5F3EA0052EF54 /* LoginViewController.h */,
@@ -190,6 +201,8 @@
 				62BFBFCA22B6BA0C0052EF54 /* ImagePickerViewController.m */,
 				62DF14EE22B8BCB800C874B9 /* DetailsPostViewController.h */,
 				62DF14EF22B8BCB800C874B9 /* DetailsPostViewController.m */,
+				62BDD6D222B955010039E261 /* ProfileViewController.h */,
+				62BDD6D322B955010039E261 /* ProfileViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -210,6 +223,8 @@
 			children = (
 				62BFBFD322B71F310052EF54 /* PostCell.h */,
 				62BFBFD422B71F310052EF54 /* PostCell.m */,
+				62BDD6D522B957090039E261 /* ProfilePostCell.h */,
+				62BDD6D622B957090039E261 /* ProfilePostCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -460,14 +475,17 @@
 			files = (
 				62DF14E322B8742900C874B9 /* User.m in Sources */,
 				62BFBFBF22B5F3B10052EF54 /* RegisterViewController.m in Sources */,
+				62CC19A622B9603F002673DE /* EditProfileViewController.m in Sources */,
 				62BFBFC522B5F3F80052EF54 /* OpeningViewController.m in Sources */,
 				62BFBF8B22B5DE1E0052EF54 /* main.m in Sources */,
 				62BFBFD122B6BC550052EF54 /* Post.m in Sources */,
+				62BDD6D722B957090039E261 /* ProfilePostCell.m in Sources */,
 				62BFBF7D22B5DE1D0052EF54 /* AppDelegate.m in Sources */,
 				62BFBFC822B5F90C0052EF54 /* HomeViewController.m in Sources */,
 				62BFBFCB22B6BA0C0052EF54 /* ImagePickerViewController.m in Sources */,
 				62BFBFC222B5F3EA0052EF54 /* LoginViewController.m in Sources */,
 				62BFBFD522B71F310052EF54 /* PostCell.m in Sources */,
+				62BDD6D422B955010039E261 /* ProfileViewController.m in Sources */,
 				62DF14F022B8BCB800C874B9 /* DetailsPostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

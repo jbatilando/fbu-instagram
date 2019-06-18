@@ -28,7 +28,8 @@
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
-    imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+    // Uncomment following line to use camera on iPhone
+    // imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     [self presentViewController:imagePickerVC animated:YES completion:nil];
     

@@ -23,6 +23,7 @@
     self.usernameAbovePostLabel.text = self.post.author.username;
     self.usernameBelowPostLabel.text = self.post.author.username;
     self.captionLabel.text = self.post.caption;
+    self.avatarImageView.layer.cornerRadius = (self.avatarImageView.frame.size.height) / 2;
     
     // Format createdAt date string
     NSDate *createdAt = [self.post createdAt];
