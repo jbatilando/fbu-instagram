@@ -23,6 +23,7 @@
 		62BFBFD122B6BC550052EF54 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFD022B6BC550052EF54 /* Post.m */; };
 		62BFBFD522B71F310052EF54 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFD422B71F310052EF54 /* PostCell.m */; };
 		62DF14E322B8742900C874B9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBFBB22B5EDC60052EF54 /* User.m */; };
+		62DF14F022B8BCB800C874B9 /* DetailsPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF14EF22B8BCB800C874B9 /* DetailsPostViewController.m */; };
 		7AD799E36E72B1213570D145 /* libPods-MigstagramUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E86936401910448175C7C3 /* libPods-MigstagramUITests.a */; };
 		B3B80BBF64387B9BB1A48682 /* libPods-Migstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7E527F3A103F3EE4767337 /* libPods-Migstagram.a */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,8 @@
 		62BFBFD022B6BC550052EF54 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		62BFBFD322B71F310052EF54 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		62BFBFD422B71F310052EF54 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		62DF14EE22B8BCB800C874B9 /* DetailsPostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsPostViewController.h; sourceTree = "<group>"; };
+		62DF14EF22B8BCB800C874B9 /* DetailsPostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsPostViewController.m; sourceTree = "<group>"; };
 		62E9746A22B8643F00AABBB4 /* libParse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libParse.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		905EADD8D84D3EE0A030EB7A /* Pods-Migstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Migstagram.release.xcconfig"; path = "Target Support Files/Pods-Migstagram/Pods-Migstagram.release.xcconfig"; sourceTree = "<group>"; };
 		A897A79D90BF838AD243BA6B /* libPods-MigstagramTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MigstagramTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +188,8 @@
 				62BFBFC722B5F90C0052EF54 /* HomeViewController.m */,
 				62BFBFC922B6BA0C0052EF54 /* ImagePickerViewController.h */,
 				62BFBFCA22B6BA0C0052EF54 /* ImagePickerViewController.m */,
+				62DF14EE22B8BCB800C874B9 /* DetailsPostViewController.h */,
+				62DF14EF22B8BCB800C874B9 /* DetailsPostViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 				62BFBFCB22B6BA0C0052EF54 /* ImagePickerViewController.m in Sources */,
 				62BFBFC222B5F3EA0052EF54 /* LoginViewController.m in Sources */,
 				62BFBFD522B71F310052EF54 /* PostCell.m in Sources */,
+				62DF14F022B8BCB800C874B9 /* DetailsPostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

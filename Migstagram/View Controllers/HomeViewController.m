@@ -12,6 +12,7 @@
 #import <Parse.h>
 #import <UIKit/UIKit.h>
 #import "PostCell.h"
+#import "DetailsPostViewController.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
 // MARK: Outlets
@@ -31,11 +32,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 160.0;
-    
-    // Get posts
-    // bind action to refresh control
+    // Get posts, bind action to refresh control
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchPosts) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
@@ -122,14 +119,18 @@
 //    }];
 //}
 
-/*
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqual:@"detailsSegue"]){
+        UINavigationController *navigationController = [segue destinationViewController];
+        DetailsPostViewController *detailsPostViewController = (DetailsPostViewController*)navigationController.topViewController;
+        UITableViewCell *tappedCell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+        Post *post = self.posts[indexPath.row];
+        detailsPostViewController.post = post;
+    }
+    UINavigationController *navigationController = [segue destinationViewController];
+    DetailsPostViewController *detailsPostViewController = (DetailsPostViewController*)navigationController.topViewController;
 }
-*/
 
 @end
