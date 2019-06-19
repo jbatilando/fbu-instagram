@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    // self.postContentImageView.file = self.post.image;
+    self.postContentImageView.file = self.post[@"image"];
     self.usernameAbovePostLabel.text = self.post.author.username;
     self.usernameBelowPostLabel.text = self.post.author.username;
     self.captionLabel.text = self.post.caption;

@@ -356,7 +356,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gPa-bO-nA4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gPa-bO-nA4" customClass="PFImageView">
                                 <rect key="frame" x="0.0" y="162" width="414" height="413"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -481,7 +481,7 @@
                         <outlet property="commentButton" destination="146-Bu-CYy" id="jVR-qg-mMx"/>
                         <outlet property="createdAtLabel" destination="Q1f-M1-2Sg" id="A0L-x7-Gcx"/>
                         <outlet property="likeButton" destination="mut-sY-xdv" id="g1l-zd-ugs"/>
-                        <outlet property="postContentImageView" destination="gPa-bO-nA4" id="B55-2g-bcd"/>
+                        <outlet property="postContentImageView" destination="gPa-bO-nA4" id="iuA-Wg-Fr6"/>
                         <outlet property="saveButton" destination="75R-YH-xXY" id="ZD3-4T-pq1"/>
                         <outlet property="sendButton" destination="NPf-hR-gAb" id="cTK-Ja-dQg"/>
                         <outlet property="usernameAbovePostLabel" destination="usL-uN-Zvc" id="oxa-Nc-ugO"/>
