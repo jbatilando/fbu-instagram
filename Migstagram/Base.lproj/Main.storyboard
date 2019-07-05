@@ -920,6 +920,7 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="l9h-Ru-eJC"/>
         <segue reference="xFm-Uw-qQ0"/>
         <segue reference="2uh-2G-5Xd"/>
     </inferredMetricsTieBreakers>

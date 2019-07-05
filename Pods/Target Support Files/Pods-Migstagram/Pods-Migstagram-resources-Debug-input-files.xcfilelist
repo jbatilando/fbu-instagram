@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Migstagram/Pods-Migstagram-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/JGProgressHUD/JGProgressHUD.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/Parse/ParseUI.bundle

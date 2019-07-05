@@ -8,7 +8,7 @@ target 'Migstagram' do
   # Pods for Migstagram
   pod 'Parse'
   pod 'Parse/UI'
-
+  pod 'JGProgressHUD'
   target 'MigstagramTests' do
     inherit! :search_paths
     # Pods for testing

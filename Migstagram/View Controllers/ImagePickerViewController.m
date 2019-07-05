@@ -8,6 +8,7 @@
 
 #import "ImagePickerViewController.h"
 #import "Post.h"
+#import "JGProgressHUD.h"
 
 @interface ImagePickerViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *selectedImageView;
@@ -60,9 +61,13 @@
 - (IBAction)didTapPost:(id)sender {
     if (![self.selectedImageView.image isEqual:[UIImage imageNamed:@"image_placeholder"]] && !self.uploading) {
         self.uploading = YES;
+        JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+        HUD.textLabel.text = @"Loading";
+        [HUD showInView:self.view];
         [Post postUserImage:self.selectedImageView.image withCaption:self.captionTextView.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
             if (succeeded) {
                 self.selectedImageView.image = [UIImage imageNamed:@"image_placeholder"];
+                [HUD dismissAnimated:YES];
             }
             else {
                 NSLog(@"Failed to post");
