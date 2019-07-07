@@ -15,13 +15,15 @@
 #import "DetailsPostViewController.h"
 #import "ProfileViewController.h"
 
-@interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface HomeViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 // MARK: Outlets
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 // MARK: Properties
 @property (nonatomic, strong) NSMutableArray *posts;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic) NSInteger index;
+@property (nonatomic) BOOL isMoreDataLoading; // Configure retweet button
 @end
 
 @implementation HomeViewController
@@ -40,7 +42,7 @@
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     self.posts = [[NSMutableArray alloc] init];
     
-    [self fetchPosts:@20];
+    [self fetchPosts];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -99,6 +101,7 @@
                 [self.posts addObject:post];
             }
             [self.refreshControl endRefreshing];
+            self.isMoreDataLoading = NO;
             [self.tableView reloadData];
         } else {
             NSLog(@"%@", error.localizedDescription);
@@ -107,11 +110,12 @@
 }
 
 - (void) fetchPosts:(NSNumber *) postCount {
+    NSLog(@"Getting next 15 posts");
     // Construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     [query includeKey:@"author"];
     [query orderByDescending:@"createdAt"];
-    query.limit = 20;
+    query.limit = 15;
     
     // Fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
@@ -121,11 +125,28 @@
                 [self.posts addObject:post];
             }
             [self.refreshControl endRefreshing];
+            self.isMoreDataLoading = NO;
             [self.tableView reloadData];
         } else {
             NSLog(@"%@", error.localizedDescription);
         }
     }];
+}
+
+// Infinite scroll
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if(!self.isMoreDataLoading){
+        // Calculate the position of one screen length before the bottom of the results
+        int scrollViewContentHeight = self.tableView.contentSize.height;
+        int scrollOffsetThreshold = scrollViewContentHeight - self.tableView.bounds.size.height;
+        
+        // When the user has scrolled past the threshold, start requesting
+        if(scrollView.contentOffset.y > scrollOffsetThreshold && self.tableView.isDragging) {
+            self.isMoreDataLoading = YES;
+            // Need to load more
+            [self fetchPosts:@(1)];
+        }
+    }
 }
 
 // MARK: IBActions
@@ -140,7 +161,6 @@
     }
     if ([segue.identifier isEqual:@"profileSegue"]){
         ProfileViewController *profileViewController = [segue destinationViewController];
-        UITableViewCell *tappedCell = sender;
         Post *post = self.posts[self.index];
         profileViewController.user = post.author;
     }
