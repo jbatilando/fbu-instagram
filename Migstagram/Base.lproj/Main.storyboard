@@ -192,7 +192,7 @@
                                                         <constraint firstAttribute="height" constant="413" id="k7N-sl-p3c"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mnD-WN-bhU">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mnD-WN-bhU" customClass="PFImageView">
                                                     <rect key="frame" x="10" y="12" width="56" height="56"/>
                                                     <color key="backgroundColor" red="0.31372549020000001" green="0.7843137255" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -342,6 +342,7 @@
                     <navigationItem key="navigationItem" title="Instagram" id="Wgr-KA-HuR"/>
                     <connections>
                         <outlet property="tableView" destination="dfR-Rq-Ctw" id="HAr-N0-xyi"/>
+                        <segue destination="qHf-SV-Ovf" kind="show" identifier="profileSegue" id="nxQ-HN-odE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="diD-yA-HQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -684,11 +685,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="znX-7z-uV5">
-                                <rect key="frame" x="20" y="70" width="84" height="98"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="znX-7z-uV5" customClass="PFImageView">
+                                <rect key="frame" x="20" y="70" width="84" height="84"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="4WX-if-CJw"/>
-                                    <constraint firstAttribute="height" constant="56" id="jL5-1F-g9d"/>
+                                    <constraint firstAttribute="height" constant="84" id="SYv-JI-4wf"/>
+                                    <constraint firstAttribute="width" constant="84" id="btY-UW-42k"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Miguel Batilando" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i79-s8-PmA">
@@ -791,6 +792,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="znX-7z-uV5" firstAttribute="leading" secondItem="3CF-B4-S25" secondAttribute="leading" constant="20" id="KGv-Jt-ajQ"/>
+                            <constraint firstItem="znX-7z-uV5" firstAttribute="top" secondItem="3CF-B4-S25" secondAttribute="top" constant="70" id="dm1-K3-p5b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="N2Z-2H-zdc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" selectedImage="profile_tab" id="9Zh-U0-Vsf">
@@ -807,6 +812,7 @@
                         <outlet property="numberOfFollowingLabel" destination="O9c-Dm-FBr" id="bCb-fP-kBQ"/>
                         <outlet property="numberOfPostsLabel" destination="Xam-4T-PnV" id="Hfd-pD-dP1"/>
                         <outlet property="postsLabel" destination="qH7-TO-5H2" id="N6g-ae-bJn"/>
+                        <outlet property="profileImageView" destination="znX-7z-uV5" id="1q9-Ft-Gf9"/>
                         <outlet property="usernameLabel" destination="i79-s8-PmA" id="btv-O0-f99"/>
                     </connections>
                 </viewController>
@@ -920,8 +926,7 @@
         <image name="profile_tab" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l9h-Ru-eJC"/>
-        <segue reference="xFm-Uw-qQ0"/>
+        <segue reference="nxQ-HN-odE"/>
         <segue reference="2uh-2G-5Xd"/>
     </inferredMetricsTieBreakers>
 </document>

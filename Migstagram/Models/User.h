@@ -8,17 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Parse/Parse.h"
+#import <Parse/PFObject+Subclass.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface User : PFUser<PFSubclassing>
 // MARK: Properties
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *screenName;
-@property (strong, nonatomic) NSString *avatarImageURLString;
+@property (nonatomic, strong) PFFileObject *profileImage;
 
-// Create initializer
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+// MARK: Methods
++ (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image;
 @end
 
 NS_ASSUME_NONNULL_END

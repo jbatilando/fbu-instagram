@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // MARK: Outlets
 @property (weak, nonatomic) IBOutlet PFImageView *postContentImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *postAvatarImageView;
+@property (weak, nonatomic) IBOutlet PFImageView *postAvatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *postAuthorLabel;
 @property (weak, nonatomic) IBOutlet UIButton *postOptionsButton;
 @property (weak, nonatomic) IBOutlet UIButton *postCommentButton;

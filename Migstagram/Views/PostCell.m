@@ -30,6 +30,10 @@
     self.postContentImageView.file = post.image;
     [self.postContentImageView loadInBackground];
     
+    self.postAvatarImageView.image = [UIImage imageNamed:@"image_placeholder"];
+    self.postAvatarImageView.file = [post.author objectForKey:@"profileImage"];
+    [self.postAvatarImageView loadInBackground];
+    
     self.postAuthorLabel.text = post.author.username;
     self.postAuthorBeneathButton.text = post.author.username;
     self.postCaptionLabel.text = post.caption;

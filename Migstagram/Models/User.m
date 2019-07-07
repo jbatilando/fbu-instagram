@@ -7,18 +7,22 @@
 //
 
 #import "User.h"
-#import <Parse.h>
 
 @implementation User
-// Initialize
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self = [super init];
-    if (self) {
-        self.name = dictionary[@"name"];
-        self.screenName = dictionary[@"screen_name"];
-        self.avatarImageURLString = dictionary[@"profile_image_url_https"];
-        // Initialize any other properties
+@dynamic profileImage;
+
++ (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image {
+    // Check if image is not nil
+    if (!image) {
+        return nil;
     }
-    return self;
+    
+    NSData *imageData = UIImagePNGRepresentation(image);
+    // Get image data and check if that is not nil
+    if (!imageData) {
+        return nil;
+    }
+    
+    return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
 }
 @end

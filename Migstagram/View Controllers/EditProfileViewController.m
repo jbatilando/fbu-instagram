@@ -11,6 +11,8 @@
 #import "AppDelegate.h"
 #import <Parse.h>
 #import "OpeningViewController.h"
+#import "Post.h"
+#import "User.h"
 
 @interface EditProfileViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
@@ -58,8 +60,14 @@
 }
 
 - (IBAction)didTapDone:(id)sender {
+    PFFileObject *image = [User getPFFileFromImage:self.avatarImageView.image];
+    [image saveInBackground];
+    [PFUser.currentUser setObject:image forKey:@"profileImage"];
+    [PFUser.currentUser saveInBackground];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 - (IBAction)didTapLogout:(id)sender {
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

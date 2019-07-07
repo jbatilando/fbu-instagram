@@ -62,8 +62,9 @@
     if (![self.selectedImageView.image isEqual:[UIImage imageNamed:@"image_placeholder"]] && !self.uploading) {
         self.uploading = YES;
         JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
-        HUD.textLabel.text = @"Loading";
+        HUD.textLabel.text = @"Posting";
         [HUD showInView:self.view];
+        
         [Post postUserImage:self.selectedImageView.image withCaption:self.captionTextView.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
             if (succeeded) {
                 self.selectedImageView.image = [UIImage imageNamed:@"image_placeholder"];

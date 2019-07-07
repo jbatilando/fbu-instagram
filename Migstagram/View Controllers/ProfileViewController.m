@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSMutableArray *posts;
 
 // MARK: Outlets
+@property (weak, nonatomic) IBOutlet PFImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
@@ -35,7 +36,15 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
-    self.usernameLabel.text = PFUser.currentUser.username;
+    NSLog(@"User: %@", self.user.username);
+    self.usernameLabel.text = self.user.username;
+
+    self.profileImageView.image = [UIImage imageNamed:@"image_placeholder"];
+    self.profileImageView.file = [self.user objectForKey:@"profileImage"];
+    [self.profileImageView loadInBackground];
+    
+    self.profileImageView.layer.cornerRadius = (self.profileImageView.frame.size.height) / 2;
+    [self.profileImageView loadInBackground];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
     CGFloat spacing = 0;
@@ -70,7 +79,7 @@
     // construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     [query includeKey:@"author"];
-    [query whereKey:@"author" equalTo:PFUser.currentUser];
+    [query whereKey:@"author" equalTo:self.user];
     [query orderByDescending:@"createdAt"];
     
     // fetch data asynchronously

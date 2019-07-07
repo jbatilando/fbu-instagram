@@ -13,6 +13,7 @@
 #import <UIKit/UIKit.h>
 #import "PostCell.h"
 #import "DetailsPostViewController.h"
+#import "ProfileViewController.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
 // MARK: Outlets
@@ -20,6 +21,7 @@
 // MARK: Properties
 @property (nonatomic, strong) NSMutableArray *posts;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (nonatomic) NSInteger index;
 @end
 
 @implementation HomeViewController
@@ -48,10 +50,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
     Post *post = self.posts[indexPath.row];
+    
+    // Tap on image
+    UITapGestureRecognizer *newTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapCellName:)];
+    [cell.postAuthorLabel setUserInteractionEnabled:YES];
+    [cell.postAuthorLabel addGestureRecognizer:newTap];
+    
+    // Set cell
     cell.post = post;
     cell.postContentImageView.file = post[@"image"];
     cell.postCaptionLabel.text = post[@"caption"];
     [cell.postContentImageView loadInBackground];
+    
     return cell;
 }
 
@@ -60,6 +70,14 @@
 }
 
 // MARK: Methods
+- (void)didTapCellName:(id)sender{
+    NSLog(@"didTapCellName");
+    CGPoint location = [sender locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];
+    self.index = indexPath.row;
+    [self performSegueWithIdentifier:@"profileSegue" sender:nil];
+}
+
 - (void)beginRefresh:(UIRefreshControl *)refreshControl {
     // [self getTimeline];
     [self.tableView reloadData];
@@ -111,8 +129,6 @@
 }
 
 // MARK: IBActions
-
-
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqual:@"detailsSegue"]){
@@ -121,6 +137,12 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
         Post *post = self.posts[indexPath.row];
         detailsPostViewController.post = post;
+    }
+    if ([segue.identifier isEqual:@"profileSegue"]){
+        ProfileViewController *profileViewController = [segue destinationViewController];
+        UITableViewCell *tappedCell = sender;
+        Post *post = self.posts[self.index];
+        profileViewController.user = post.author;
     }
 }
 
