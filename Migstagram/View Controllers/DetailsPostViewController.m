@@ -23,7 +23,18 @@
     self.usernameAbovePostLabel.text = self.post.author.username;
     self.usernameBelowPostLabel.text = self.post.author.username;
     self.captionLabel.text = self.post.caption;
+    
+    self.avatarImageView.image = [UIImage imageNamed:@"image_placeholder"];
+    self.avatarImageView.file = [self.post.author objectForKey:@"profileImage"];
+    [self.avatarImageView loadInBackground];
     self.avatarImageView.layer.cornerRadius = (self.avatarImageView.frame.size.height) / 2;
+    
+    self.likeCountLabel.text = [NSString stringWithFormat:@"%@",self.post.likeCount];
+    
+    // Tap on comments label
+    UITapGestureRecognizer *newTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapViewCommentsLabel:)];
+    [self.viewCommentsLabel setUserInteractionEnabled:YES];
+    [self.viewCommentsLabel addGestureRecognizer:newTap];
     
     // Format createdAt date string
     NSDate *createdAt = [self.post createdAt];
@@ -35,4 +46,22 @@
     self.createdAtLabel.text = [formatter stringFromDate:createdAt];
 }
 
+- (IBAction)didTapLikeButton:(id)sender {
+    NSNumber *currentLikeCount = self.post.likeCount;
+    int value = [currentLikeCount intValue];
+    currentLikeCount = [NSNumber numberWithInt:value + 1];
+    
+    [self.post setValue:currentLikeCount forKey:@"likeCount"];
+    [self.post saveInBackground];
+}
+
+- (void)didTapViewCommentsLabel:(id)sender{
+    NSLog(@"didTapCommentsLabel");
+    [self performSegueWithIdentifier:@"commentsSegue" sender:nil];
+}
+
+- (IBAction)didTapCommentButton:(id)sender {
+    NSLog(@"Tapped comment button");
+    // Perform Segue to commentsVC
+}
 @end

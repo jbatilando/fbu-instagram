@@ -58,6 +58,13 @@
 - (IBAction)didTapSave:(id)sender {
 }
 - (IBAction)didTapLike:(id)sender {
+    NSLog(@"Tapped Like Button on the Cell");
+    NSNumber *currentLikeCount = self.post.likeCount;
+    int value = [currentLikeCount intValue];
+    currentLikeCount = [NSNumber numberWithInt:value + 1];
+    
+    [self.post setValue:currentLikeCount forKey:@"likeCount"];
+    [self.post saveInBackground];
 }
 
 @end

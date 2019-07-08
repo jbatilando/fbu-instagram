@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4E18E7FBFC5A8AC339FECFC8 /* libPods-MigstagramTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A897A79D90BF838AD243BA6B /* libPods-MigstagramTests.a */; };
+		627C7A8B22D2B69D00A5B31D /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627C7A8A22D2B69D00A5B31D /* CommentsViewController.m */; };
+		627C7A8E22D2BBA300A5B31D /* PostCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627C7A8D22D2BBA300A5B31D /* PostCommentViewController.m */; };
+		627C7A9122D2C2CC00A5B31D /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 627C7A9022D2C2CC00A5B31D /* Billabong.ttf */; };
 		62BDD6D422B955010039E261 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD6D322B955010039E261 /* ProfileViewController.m */; };
 		62BDD6D722B957090039E261 /* ProfilePostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD6D622B957090039E261 /* ProfilePostCell.m */; };
 		62BFBF7D22B5DE1D0052EF54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBF7C22B5DE1D0052EF54 /* AppDelegate.m */; };
@@ -51,6 +54,11 @@
 /* Begin PBXFileReference section */
 		24C592B4080860927B54D576 /* Pods-MigstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MigstagramTests.release.xcconfig"; path = "Target Support Files/Pods-MigstagramTests/Pods-MigstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		3553DE352FC7AB6CC225E5C8 /* Pods-Migstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Migstagram.debug.xcconfig"; path = "Target Support Files/Pods-Migstagram/Pods-Migstagram.debug.xcconfig"; sourceTree = "<group>"; };
+		627C7A8922D2B69D00A5B31D /* CommentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentsViewController.h; sourceTree = "<group>"; };
+		627C7A8A22D2B69D00A5B31D /* CommentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentsViewController.m; sourceTree = "<group>"; };
+		627C7A8C22D2BBA300A5B31D /* PostCommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCommentViewController.h; sourceTree = "<group>"; };
+		627C7A8D22D2BBA300A5B31D /* PostCommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCommentViewController.m; sourceTree = "<group>"; };
+		627C7A9022D2C2CC00A5B31D /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Billabong.ttf; path = ../../../../Desktop/Billabong.ttf; sourceTree = "<group>"; };
 		62BDD6D222B955010039E261 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		62BDD6D322B955010039E261 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		62BDD6D522B957090039E261 /* ProfilePostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfilePostCell.h; sourceTree = "<group>"; };
@@ -127,9 +135,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		627C7A8F22D2C2C000A5B31D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				627C7A9022D2C2CC00A5B31D /* Billabong.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		62BFBF6F22B5DE1D0052EF54 = {
 			isa = PBXGroup;
 			children = (
+				627C7A8F22D2C2C000A5B31D /* Fonts */,
 				62BFBF7A22B5DE1D0052EF54 /* Migstagram */,
 				62BFBF9322B5DE1E0052EF54 /* MigstagramTests */,
 				62BFBF9E22B5DE1E0052EF54 /* MigstagramUITests */,
@@ -201,8 +218,12 @@
 				62BFBFCA22B6BA0C0052EF54 /* ImagePickerViewController.m */,
 				62DF14EE22B8BCB800C874B9 /* DetailsPostViewController.h */,
 				62DF14EF22B8BCB800C874B9 /* DetailsPostViewController.m */,
+				627C7A8922D2B69D00A5B31D /* CommentsViewController.h */,
+				627C7A8A22D2B69D00A5B31D /* CommentsViewController.m */,
 				62BDD6D222B955010039E261 /* ProfileViewController.h */,
 				62BDD6D322B955010039E261 /* ProfileViewController.m */,
+				627C7A8C22D2BBA300A5B31D /* PostCommentViewController.h */,
+				627C7A8D22D2BBA300A5B31D /* PostCommentViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -363,6 +384,7 @@
 				62BFBF8822B5DE1E0052EF54 /* LaunchScreen.storyboard in Resources */,
 				62BFBF8522B5DE1E0052EF54 /* Assets.xcassets in Resources */,
 				62BFBF8322B5DE1D0052EF54 /* Main.storyboard in Resources */,
+				627C7A9122D2C2CC00A5B31D /* Billabong.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,11 +503,13 @@
 				62BFBFD122B6BC550052EF54 /* Post.m in Sources */,
 				62BDD6D722B957090039E261 /* ProfilePostCell.m in Sources */,
 				62BFBF7D22B5DE1D0052EF54 /* AppDelegate.m in Sources */,
+				627C7A8B22D2B69D00A5B31D /* CommentsViewController.m in Sources */,
 				62BFBFC822B5F90C0052EF54 /* HomeViewController.m in Sources */,
 				62BFBFCB22B6BA0C0052EF54 /* ImagePickerViewController.m in Sources */,
 				62BFBFC222B5F3EA0052EF54 /* LoginViewController.m in Sources */,
 				62BFBFD522B71F310052EF54 /* PostCell.m in Sources */,
 				62BDD6D422B955010039E261 /* ProfileViewController.m in Sources */,
+				627C7A8E22D2BBA300A5B31D /* PostCommentViewController.m in Sources */,
 				62DF14F022B8BCB800C874B9 /* DetailsPostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

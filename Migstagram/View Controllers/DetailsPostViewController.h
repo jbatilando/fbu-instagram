@@ -14,10 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailsPostViewController : UIViewController
 // MARK: Outlets
-@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
+@property (weak, nonatomic) IBOutlet PFImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *usernameAbovePostLabel;
 @property (weak, nonatomic) IBOutlet PFImageView *postContentImageView;
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
+@property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *viewCommentsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;

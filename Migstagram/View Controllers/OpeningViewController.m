@@ -9,6 +9,9 @@
 #import "OpeningViewController.h"
 
 @interface OpeningViewController ()
+@property (strong, nonatomic) IBOutlet UIView *backgroundView;
+@property (weak, nonatomic) IBOutlet UIView *subView;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -17,6 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    
+    gradient.frame = self.subView.bounds;
+    gradient.colors = @[(id)[UIColor magentaColor].CGColor,
+                        (id)[UIColor blueColor].CGColor];
+    [self.subView.layer insertSublayer:gradient atIndex:0];
 }
 
 // MARK: IBActions

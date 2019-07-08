@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIView *subView;
 
 @end
 
@@ -23,6 +24,13 @@
     // Do any additional setup after loading the view.
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    
+    gradient.frame = self.subView.bounds;
+    gradient.colors = @[(id)[UIColor magentaColor].CGColor,
+                        (id)[UIColor blueColor].CGColor];
+    [self.subView.layer insertSublayer:gradient atIndex:0];
 }
 
 // MARK: IBActions

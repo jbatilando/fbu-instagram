@@ -36,9 +36,13 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
+    if (!self.user) {
+        self.user = PFUser.currentUser;
+    }
+    
     NSLog(@"User: %@", self.user.username);
     self.usernameLabel.text = self.user.username;
-
+    
     self.profileImageView.image = [UIImage imageNamed:@"image_placeholder"];
     self.profileImageView.file = [self.user objectForKey:@"profileImage"];
     [self.profileImageView loadInBackground];
