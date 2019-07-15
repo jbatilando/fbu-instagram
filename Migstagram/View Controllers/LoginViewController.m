@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import <Parse.h>
+#import "JGProgressHUD.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -39,11 +40,15 @@
 - (void)loginUser {
     NSString *username = self.usernameTextField.text;
     NSString *password = self.passwordTextField.text;
+    JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    HUD.textLabel.text = @"Loggin in";
+    [HUD showInView:self.view];
     
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
         if (error != nil) {
             NSLog(@"User log in failed: %@", error.localizedDescription);
         } else {
+            [HUD dismissAnimated:YES];
             NSLog(@"User logged in successfully");
             // display view controller that needs to shown after successful login
             [self performSegueWithIdentifier:@"homeSegue2" sender:self];

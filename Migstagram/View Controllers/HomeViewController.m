@@ -14,6 +14,7 @@
 #import "PostCell.h"
 #import "DetailsPostViewController.h"
 #import "ProfileViewController.h"
+#import "JGProgressHUD.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 // MARK: Outlets
@@ -50,6 +51,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
     Post *post = self.posts[indexPath.row];
     
@@ -94,12 +96,14 @@
     query.limit = 20;
     
     // Fetch data asynchronously
+    JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    // HUD.textLabel.text = @"Loggin in";
+    [HUD showInView:self.view];
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {
-            [self.posts removeAllObjects];
-            for (Post *post in posts) {
-                [self.posts addObject:post];
-            }
+            [self.posts addObjectsFromArray:posts];
+            NSLog(@"%@ hello", posts);
+            [HUD dismissAnimated:YES];
             [self.refreshControl endRefreshing];
             self.isMoreDataLoading = NO;
             [self.tableView reloadData];
@@ -134,20 +138,20 @@
 }
 
 // Infinite scroll
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if(!self.isMoreDataLoading){
-        // Calculate the position of one screen length before the bottom of the results
-        int scrollViewContentHeight = self.tableView.contentSize.height;
-        int scrollOffsetThreshold = scrollViewContentHeight - self.tableView.bounds.size.height;
-        
-        // When the user has scrolled past the threshold, start requesting
-        if(scrollView.contentOffset.y > scrollOffsetThreshold && self.tableView.isDragging) {
-            self.isMoreDataLoading = YES;
-            // Need to load more
-            [self fetchPosts:@(1)];
-        }
-    }
-}
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    if(!self.isMoreDataLoading){
+//        // Calculate the position of one screen length before the bottom of the results
+//        int scrollViewContentHeight = self.tableView.contentSize.height;
+//        int scrollOffsetThreshold = scrollViewContentHeight - self.tableView.bounds.size.height;
+//
+//        // When the user has scrolled past the threshold, start requesting
+//        if(scrollView.contentOffset.y > scrollOffsetThreshold && self.tableView.isDragging) {
+//            self.isMoreDataLoading = YES;
+//            // Need to load more
+//            [self fetchPosts:@(1)];
+//        }
+//    }
+//}
 
 // MARK: IBActions
 #pragma mark - Navigation

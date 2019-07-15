@@ -48,7 +48,7 @@
     [self.profileImageView loadInBackground];
     
     self.profileImageView.layer.cornerRadius = (self.profileImageView.frame.size.height) / 2;
-    [self.profileImageView loadInBackground];
+    // [self.profileImageView loadInBackground];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
     CGFloat spacing = 0;

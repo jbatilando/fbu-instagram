@@ -13,6 +13,7 @@
 #import "OpeningViewController.h"
 #import "Post.h"
 #import "User.h"
+#import "JGProgressHUD.h"
 
 @interface EditProfileViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
@@ -25,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.avatarImageView.image = [UIImage imageNamed:@"image_placeholder"];
     self.avatarImageView.layer.cornerRadius = (self.avatarImageView.frame.size.height) / 2;
 }
 
@@ -61,7 +63,7 @@
 
 - (IBAction)didTapDone:(id)sender {
     PFFileObject *image = [User getPFFileFromImage:self.avatarImageView.image];
-    [image saveInBackground];
+    //[image saveInBackground];
     [PFUser.currentUser setObject:image forKey:@"profileImage"];
     [PFUser.currentUser saveInBackground];
     
@@ -69,11 +71,11 @@
 }
 
 - (IBAction)didTapLogout:(id)sender {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    OpeningViewController *openingViewController = [storyboard instantiateViewControllerWithIdentifier:@"OpeningViewController"];
-    appDelegate.window.rootViewController = openingViewController;
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        OpeningViewController *openingViewController = [storyboard instantiateViewControllerWithIdentifier:@"OpeningViewController"];
+        appDelegate.window.rootViewController = openingViewController;
         NSLog(@"Logged out!");
     }];
 }

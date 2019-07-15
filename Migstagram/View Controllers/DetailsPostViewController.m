@@ -53,6 +53,7 @@
     
     [self.post setValue:currentLikeCount forKey:@"likeCount"];
     [self.post saveInBackground];
+    self.likeCountLabel.text = [NSString stringWithFormat:@"%@",self.post.likeCount];
 }
 
 - (void)didTapViewCommentsLabel:(id)sender{

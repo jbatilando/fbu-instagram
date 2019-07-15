@@ -8,6 +8,7 @@
 
 #import "RegisterViewController.h"
 #import <Parse.h>
+#import "JGProgressHUD.h"
 
 @interface RegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -49,10 +50,14 @@
     newUser.password = self.passwordTextField.text;
     
     // call sign up function on the object
+    JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    HUD.textLabel.text = @"Registering user";
+    [HUD showInView:self.view];
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
         } else {
+            [HUD dismissAnimated:YES];
             NSLog(@"User registered successfully");
             // manually segue to logged in view
             [self performSegueWithIdentifier:@"homeSegue1" sender:self];

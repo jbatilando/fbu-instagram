@@ -9,6 +9,7 @@
 #import "PostCommentViewController.h"
 
 @interface PostCommentViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *commentTextView;
 
 @end
 
@@ -17,6 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)didTapPost:(id)sender {
+    NSString *commentText = self.commentTextView.text;
+    
+    
+}
+
+- (IBAction)didTapCancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*
