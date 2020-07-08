@@ -41,7 +41,7 @@
     NSString *username = self.usernameTextField.text;
     NSString *password = self.passwordTextField.text;
     JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
-    HUD.textLabel.text = @"Loggin in";
+    HUD.textLabel.text = @"Logging in";
     [HUD showInView:self.view];
     
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
