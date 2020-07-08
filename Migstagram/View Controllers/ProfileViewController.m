@@ -89,7 +89,7 @@
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
         if (posts != nil) {
-            self.posts = posts;
+            self.posts = (NSMutableArray *)posts;
             NSString* postCountStr = [NSString stringWithFormat:@"%lu", (unsigned long)self.posts.count];
             self.numberOfPostsLabel.text = postCountStr;
             [self.collectionView reloadData];

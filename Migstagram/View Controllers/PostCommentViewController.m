@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)didTapPost:(id)sender {
-    NSString *commentText = self.commentTextView.text;
+    // NSString *commentText = self.commentTextView.text;
     
     
 }

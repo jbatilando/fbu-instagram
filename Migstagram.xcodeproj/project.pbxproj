@@ -135,6 +135,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6208B20824B575C1003BF9CB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				62BFBF8122B5DE1D0052EF54 /* Main.storyboard */,
+				62BFBF8622B5DE1E0052EF54 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		627C7A8F22D2C2C000A5B31D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,14 +178,13 @@
 		62BFBF7A22B5DE1D0052EF54 /* Migstagram */ = {
 			isa = PBXGroup;
 			children = (
+				6208B20824B575C1003BF9CB /* Storyboards */,
 				62BFBFD222B71F190052EF54 /* Views */,
 				62BFBFB822B5ED150052EF54 /* Models */,
 				62BFBFB722B5EC230052EF54 /* View Controllers */,
 				62BFBF7C22B5DE1D0052EF54 /* AppDelegate.m */,
 				62DD179922DCECAB00B453DE /* AppDelegate.h */,
-				62BFBF8122B5DE1D0052EF54 /* Main.storyboard */,
 				62BFBF8422B5DE1E0052EF54 /* Assets.xcassets */,
-				62BFBF8622B5DE1E0052EF54 /* LaunchScreen.storyboard */,
 				62BFBF8922B5DE1E0052EF54 /* Info.plist */,
 				62BFBF8A22B5DE1E0052EF54 /* main.m */,
 			);
