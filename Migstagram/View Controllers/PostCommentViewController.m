@@ -20,9 +20,23 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)didTapPost:(id)sender {
-    // NSString *commentText = self.commentTextView.text;
+    NSString *commentText = self.commentTextView.text;
+    [self.post.commentArray addObject:commentText];
+    self.post[@"commentArray"] = (NSArray *)self.post.commentArray;
+    self.post[@"caption"] = @"changed";
     
+    NSLog(@"Tried to comment: %@", commentText);
+    NSLog(@"Current commentArray content: %@", commentText);
     
+    [self.post saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"Updated comments");
+            [self.delegate didComment:commentText];
+        }
+        else {
+            NSLog(@"Failed to comment");
+        }
+    }];
 }
 
 - (IBAction)didTapCancel:(id)sender {

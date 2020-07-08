@@ -55,7 +55,7 @@
 
 // MARK: IBActions
 - (IBAction)didTapCancel:(id)sender {
-    [self performSegueWithIdentifier:@"homeSegue3" sender:nil];
+    // This button does nothing
 }
 
 - (IBAction)didTapPost:(id)sender {
@@ -75,8 +75,6 @@
                 // Create an alert
             }
             self.uploading = NO;
-            // [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
-            [self performSegueWithIdentifier:@"homeSegue3" sender:nil];
         }];
     }
     else {

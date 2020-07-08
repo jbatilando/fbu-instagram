@@ -7,63 +7,52 @@
 //
 
 #import "CommentsViewController.h"
+#import "PostCommentViewController.h"
 
-@interface CommentsViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface CommentsViewController () <UITableViewDelegate, UITableViewDataSource, PostCommentViewControllerDelegate>
 // MARK: Properties
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation CommentsViewController
-
+#pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     [self fetchComments];
 }
 
-// MARK: Table View
+#pragma mark - Table View
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.comments.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    
-    cell.textLabel.text = @"comment";
+    cell.textLabel.text = self.comments[indexPath.row];
     
     return cell;
 }
 
-// MARK: Methods
+#pragma mark - Methods
 - (void) fetchComments {
-    // Construct query
-    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
-    [query includeKey:@"author"];
-    [query orderByDescending:@"createdAt"];
-    query.limit = 20;
-    
-    // Fetch data asynchronously
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable comments, NSError * _Nullable error) {
-        if (comments) {
-            [self.comments removeAllObjects];
-            for (NSString *comment in comments) {
-                [self.comments addObject:comment];
-            }
-            [self.tableView reloadData];
-        } else {
-            NSLog(@"%@", error.localizedDescription);
-        }
-    }];
+    self.comments = [self.post objectForKey:@"commentArray"];
+    [self.tableView reloadData];
 }
-/*
+
+- (void)didComment:(NSString *)comment {
+    [self.tableView reloadData];
+}
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqual:@"toPostComment"]){
+        PostCommentViewController *postCommentViewController = [segue destinationViewController];
+        postCommentViewController.post = self.post;
+        postCommentViewController.delegate = self;
+    }
 }
-*/
+
 
 @end

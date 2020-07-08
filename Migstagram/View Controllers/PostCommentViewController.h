@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Post.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PostCommentViewController : UIViewController
+@protocol PostCommentViewControllerDelegate
 
+- (void)didComment:(NSString *)comment;
+
+@end
+
+@interface PostCommentViewController : UIViewController
+@property (strong, nonatomic) Post *post;
+@property (nonatomic, weak) id<PostCommentViewControllerDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

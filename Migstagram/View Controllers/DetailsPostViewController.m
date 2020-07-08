@@ -9,6 +9,7 @@
 #import "DetailsPostViewController.h"
 #import <Parse/Parse.h>
 #import "PFImageView.h"
+#import "CommentsViewController.h"
 
 @interface DetailsPostViewController ()
 
@@ -38,14 +39,16 @@
     
     // Format createdAt date string
     NSDate *createdAt = [self.post createdAt];
-    NSLog(@"%@", createdAt);
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     
     formatter.dateFormat = @"E MMM d HH:mm:ss Z y";
     [formatter setDateFormat:@"h:mm a"];
     self.createdAtLabel.text = [formatter stringFromDate:createdAt];
+    
+    NSLog(@"Viewing object with ID: %@", self.post.objectId);
 }
 
+#pragma mark - IBActions
 - (IBAction)didTapLikeButton:(id)sender {
     NSNumber *currentLikeCount = self.post.likeCount;
     int value = [currentLikeCount intValue];
@@ -64,5 +67,13 @@
 - (IBAction)didTapCommentButton:(id)sender {
     NSLog(@"Tapped comment button");
     // Perform Segue to commentsVC
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqual:@"commentsSegue"]){
+        CommentsViewController *commentsPostViewController = [segue destinationViewController];
+        commentsPostViewController.post = self.post;
+    }
 }
 @end
